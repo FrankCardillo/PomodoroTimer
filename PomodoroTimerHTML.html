@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <h1 class="myTitle">Diana's Pomodoro Timer</h1>
+</head>
+
+<body id="page" class="myBody">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  <!-- Instructions for Use -->
+  <ul align="center" style="list-style-type: none">
+    <li class="instructions">
+      1. Use the + and - buttons to set your break and work session lengths.
+    </li>
+    <li class="instructions">
+      2. Press either the work or break button (with the number on it) to set the timer to that length.
+    </li>
+    <li class="instructions">
+      3. Press the start button to start the timer.
+    </li>
+    <li class="instructions" style="margin-bottom: 9em">
+      4. Once the timer has counted down to 0, begin the process again (step 1 is optional here).
+    </li>
+  <!-- Button Descriptions -->
+  <ul class="list-inline" align="center">
+    <li class="myBtnDsc" style="white-space:nowrap;">
+      Set Break Session Length
+    </li>
+    <li class="myBtnDsc" style="white-space:nowrap;">
+      Set Work Session Length
+    </li>
+  </ul>
+  <!-- Timer Set Buttons -->
+  <ul class="list-inline" align="center" style="margin-bottom: 10em;">
+    <li>
+      <button id="breakP" class="myBtn">+</button>
+    </li>
+    <li>
+      <button id="break" class="myBtn">5</button>
+    </li>
+    <li>
+      <button id="breakM" class="minBtnMar myBtn">-</button>
+    </li>
+    <li>
+      <button id="workP" class="pluBtnMar myBtn">+</button>
+    </li>
+    <li>
+      <button id="work" class="myBtn">25</button>
+    </li>
+    <li>
+      <button id="workM" class="myBtn">-</button>
+    </li>
+  </ul>
+  <!-- Timer -->
+  <div style="margin-bottom: 5em;">
+  <div id="inner" class="timer">
+    <p id="timerFace">25</p>
+  </div>
+    </div>
+  <!-- Timer Control Buttons -->
+  <ul class="list-inline" align="center">
+    <li>
+      <button id="start" class="myBtn">Start</button>
+    </li>
+    <li>
+      <p class="timesUsed">Times Used:</p>
+      <p id="timesUsed" class="timesUsed">0</p>
+  </ul>
+</body>
+
+</html>
