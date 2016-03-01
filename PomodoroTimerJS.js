@@ -4,6 +4,9 @@ $(document).ready(function() {
   
   /* Starts the timer. Uses setInterval to update the timer every second, creates a timer with the format MM : SS and updates them each second. This timer cannot be paused. If the user tries to set a new timer while this timer is running that will not work either. This is a pretty mediocre timer, but at least it's accurate. */
   $("#start").click(function() {
+    $(this).prop("disabled", true);
+    $("#work").prop("disabled", true);
+    $("#break").prop("disabled", true);
     var myTime = 60 * document.getElementById("timerFace").textContent;
     var myInterval = setInterval(function() {
       var minutes = parseInt(myTime / 60, 10);
@@ -18,7 +21,9 @@ $(document).ready(function() {
         var wav = 'http://www.oringz.com/oringz-uploads/sounds-792-the-little-dwarf.mp3';
         var audio = new Audio(wav);
         audio.play();
-        
+        $(this).prop("disabled", false);
+        $("#work").prop("disabled", false);
+        $("#break").prop("disabled", false);
         /* Diana wanted a counter to keep track of the number of work sessions she had completed in one sitting */
         if (workSession === true) {
           document.getElementById("timesUsed").textContent = Number(document.getElementById("timesUsed").textContent) + 1;
@@ -26,7 +31,6 @@ $(document).ready(function() {
         clearInterval(myInterval);
       }
     }, 1000);
-    $(this).prop("disabled", true);
   });
 
   /* Populates the timer face with the time specified in the work session setting */
